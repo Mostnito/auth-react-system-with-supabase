@@ -7,8 +7,8 @@ import { useNavigate } from "react-router-dom"
 
 
 
-import "./Login.css";
-function Login(){
+import "./Register.css";
+function Register(){
     const navigate = useNavigate()
     const [validEmail, setValidEmail] = useState(false);
     const [email, setEmail] = useState("");
@@ -49,8 +49,8 @@ function Login(){
     }
 
     return(
-        <div className="login-container">
-            <h2>เข้าสู่ระบบ</h2>
+        <div className="register-container">
+            <h2>สมัครสมาชิก</h2>
             <form>
                 <p><MdEmail size={20}/> อีเมล</p>
                 <input className="inbtn" onChange={(e)=>{emailvalid(e.target.value)}} placeholder="example@gmail.com" />
@@ -64,7 +64,7 @@ function Login(){
                 
                 <button className={password==="" ? "disabled" : validEmail === false ? "disabled" : "enabled"} type="submit" onClick={(e)=>{submit(e)}}>เข้าสู่ระบบ</button>
                 <div className="register-link">
-                    <span>ยังไม่มีบัญชี? <span className="btn-reg" onClick={()=> navigate("/register")}>สมัครสมาชิก</span></span>
+                    <span>ยังไม่มีบัญชี? <span className="btn-reg" onClick={()=> navigate("/")}>สมัครสมาชิก</span></span>
                 </div>
                 
             </form>
@@ -72,4 +72,4 @@ function Login(){
     )
 }
 
-export default Login;
+export default Register;
