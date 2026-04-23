@@ -5,6 +5,7 @@ import Dashboard from "./components/Dashboard";
 import { useState, useEffect, use } from "react";
 import { supabase } from "./supabase";
 import { Routes, Route } from "react-router-dom";
+import { Navigate } from "react-router-dom"
 import "./App.css";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Header theme={theme} setTheme={setTheme} session={session} setSession={setSession} username={username} setUsername={setUsername}/>
         <main>
           <Routes>
+            <Route path="/" element={<Navigate to="/dashboard" />} />
             <Route path="/dashboard" element={<Dashboard session={session} setSession={setSession} username={username} setUsername={setUsername}/>} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
