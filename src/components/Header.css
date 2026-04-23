@@ -1,0 +1,15 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    border-bottom: 1px solid #ccc;
+    font-size: 15px;
+}
+
+
+.headerright{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}

@@ -1,0 +1,24 @@
+.app{
+  text-align: center;
+  padding: 0px 10px;
+}
+
+.light{
+  background: #f8fafc;
+  color: #0f172a;
+  transition: all 0.5s;
+}
+
+.dark{
+  background: #0f172a;
+  color: #f1f5f9;
+  transition: all 0.5s;
+}
+
+main{
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: center;
+  min-height: 90vh;
+}
